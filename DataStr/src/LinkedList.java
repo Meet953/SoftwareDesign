@@ -23,6 +23,7 @@ class LinkedList{
 		          }
 				 
 				temp.next=tempnew;
+				tempnew.next = null;
 				
 	        }
 
