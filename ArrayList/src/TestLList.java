@@ -22,6 +22,7 @@ import java.util.Scanner;
                         System.out.println("5: count");
                         System.out.println("6: Age of oldest");
 						System.out.println("7: How many Over than given Age");
+						System.out.println("8: Age of youngest");
 						System.out.println("9: Initialize");
 						System.out.println("10: Exit \n");
 						System.out.print("\nPlease enter a value-->");
@@ -59,6 +60,10 @@ import java.util.Scanner;
 
                                 case 6:
                                 	System.out.println("Max Age == "+l.oldest());
+								       break;
+								       
+                                case 8:
+                                	System.out.println("Min Age == "+l.youngest());
 								       break;
                                 case 7:
 									System.out.print("Enter Age:");

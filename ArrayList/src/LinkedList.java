@@ -15,17 +15,7 @@ class MyArrayList{
 	                    count++;
 	                    return true;}
 	               else  return false;}	
-       public  String youngest()
-        {     int res=900;
-              String name="BLANK";
-              for(int i=0;i<count;i++){
-      	           Node temp=head[i];
-      	           if (temp.readage()<res){
-                            name=temp.readname();
-      		                res=temp.readage();}
-                   }
-              return name  ; 
-        }                                              
+                                                 
 
        		public  boolean search(String s1)
 	        {     boolean res=false;
@@ -86,6 +76,21 @@ class MyArrayList{
                     
 				return old;
 			}
+			
+			 public  String youngest()
+		        {     
+				 String young  = ""; int youngage = head[0].readage();
+	              for(int i=0;i<count;i++){
+	            	  Node temp=head[i];
+	            	  if (temp.readage() < youngage){
+	            		  youngage = temp.readage();
+	            		  young = temp.readname() + " -> " + youngage;
+	            	  }
+	              }
+                    
+				return young;
+		        }   
+			 
 			public int olderThan(int age) {
 				// TODO Auto-generated method stub
 				int no=0;
